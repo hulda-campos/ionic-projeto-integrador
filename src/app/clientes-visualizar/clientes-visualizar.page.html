@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>clientes-visualizar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input disabled="true" value="{{cliente.nome}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">CPF</ion-label>
+    <ion-input disabled="true" value="{{cliente.cpf}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Endereço</ion-label>
+    <ion-input disabled="true" value="{{cliente.endereco}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input disabled="true" value="{{cliente.numero}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input disabled="true" value="{{cliente.cidade}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Estado</ion-label>
+    <ion-input disabled="true" value="{{cliente.estado}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input disabled="true" value="{{cliente.email}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input disabled="true" value="{{cliente.telefone}}"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="atualizar()" expand="full">Atualizar</ion-button>
+  <ion-button (click)="excluir()" expand="full">Excluir</ion-button>
+
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { Cliente } from '../model/cliente';
 import { ClienteService } from '../services/cliente.service';
 
@@ -11,7 +12,8 @@ export class ClientesPage implements OnInit {
 
   lista : Cliente[] = [];
 
-  constructor(private clienteServ : ClienteService) { }
+  constructor(private clienteServ : ClienteService,
+    private navCtrl : NavController) { }
 
   ngOnInit() {
     this.clienteServ.listaDeClientes().subscribe(response=>{
@@ -25,5 +27,8 @@ export class ClientesPage implements OnInit {
     })
   }
   
+  visualizar(cliente){
+    this.navCtrl.navigateForward(['/clientes-visualizar',cliente.id])
+  }
 
 }

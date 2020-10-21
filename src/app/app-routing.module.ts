@@ -31,7 +31,19 @@ const routes: Routes = [
   loadChildren: () => import('./sair/sair.module').then( m => m.SairPageModule),
   canActivate : [AngularFireAuthGuard],
   data : {authGuardPipe : redirectToLogin}
- }
+ },
+  {
+    path: 'clientes-visualizar/:id',
+    loadChildren: () => import('./clientes-visualizar/clientes-visualizar.module').then( m => m.ClientesVisualizarPageModule)
+  },
+  {
+    path: 'clientes-atualizar/:id',
+    loadChildren: () => import('./clientes-atualizar/clientes-atualizar.module').then( m => m.ClientesAtualizarPageModule)
+  },
+  {
+    path: 'clientes-excluir/:id',
+    loadChildren: () => import('./clientes-excluir/clientes-excluir.module').then( m => m.ClientesExcluirPageModule)
+  }
 ];
 
 @NgModule({
